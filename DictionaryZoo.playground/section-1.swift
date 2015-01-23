@@ -1,10 +1,5 @@
-// Playground - noun: a place where people can play
-
-import UIKit
-
 class Zoo {
-    let animal: [String] = ["Tiger","Monkey","Panda"]
-    let food: [String] = ["meat","banana","Bamboo"]
+    let animal: [String: String] = ["Tiger":"Meat","Monkey":"banana","Panda":"Bamboo"]
     let animal1: String
     
     init(animal:String){
@@ -12,9 +7,9 @@ class Zoo {
     }
     func Zoofunny() -> String{
         var anser:String = ""
-        for(var i=0; i < animal.count ; i++){
-            if(animal[i] == animal1){
-                anser = food[i];
+        for (key,value) in animal{
+            if(key == animal1){
+                anser = value;
             }
         }
         return anser
